@@ -39,8 +39,7 @@ public class TestBase {
     public void tearDown(){
         try {
                 MobileUtil.waitFor(3);
-
-            driver.quit();
+                driver.quit();
         }catch (Exception e){
             e.printStackTrace();
         }
