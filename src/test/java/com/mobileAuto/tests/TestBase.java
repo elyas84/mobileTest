@@ -6,10 +6,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 
 import java.net.URL;
 
@@ -42,7 +39,8 @@ public class TestBase {
     public void tearDown(){
         try {
                 MobileUtil.waitFor(3);
-                driver.quit();
+
+            driver.quit();
         }catch (Exception e){
             e.printStackTrace();
         }
